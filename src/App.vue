@@ -58,9 +58,9 @@
     </div>
 
     <div style="margin-top: 24px; padding: 16px; background: #f8fafc; border-radius: 8px; font-size: 13px">
-      <strong>How to fix:</strong> Open <code>src/main.js</code> and uncomment the
-      <code>// PATCH:</code> block. The panel will then appear at the correct 40% width
-      immediately, with no layout shift.
+      <strong>How to fix:</strong> Open <code>src/main.js</code> and change
+      <code>APPLY_PATCH</code> from <code>false</code> to <code>true</code>.
+      The panel will then appear at the correct 40% width immediately, with no layout shift.
     </div>
   </div>
 </template>

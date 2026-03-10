@@ -6,25 +6,29 @@ import SplitterPanel from 'primevue/splitterpanel';
 import App from './App.vue';
 
 // =============================================================================
-// PATCH: Uncomment the block below to fix the bug.
+// PATCH: Set to `true` to apply the fix.
 //
 // Adds an `updated()` hook to Splitter that re-initializes panels when the
 // child count changes. The count guard ensures user resize state is NOT reset
 // on every re-render — only when panels are actually added or removed.
 // =============================================================================
 
-// const originalMounted = Splitter.mounted;
-// Splitter.mounted = function () {
-//   originalMounted.call(this);
-//   this._lastPanelCount = this.panels.length;
-// };
-// Splitter.updated = function () {
-//   const currentPanelCount = this.panels.length;
-//   if (currentPanelCount !== this._lastPanelCount) {
-//     this._lastPanelCount = currentPanelCount;
-//     this.initializePanels();
-//   }
-// };
+const APPLY_PATCH = false;
+
+if (APPLY_PATCH) {
+  const originalMounted = Splitter.mounted;
+  Splitter.mounted = function () {
+    originalMounted.call(this);
+    this._lastPanelCount = this.panels.length;
+  };
+  Splitter.updated = function () {
+    const currentPanelCount = this.panels.length;
+    if (currentPanelCount !== this._lastPanelCount) {
+      this._lastPanelCount = currentPanelCount;
+      this.initializePanels();
+    }
+  };
+}
 
 const app = createApp(App);
 
