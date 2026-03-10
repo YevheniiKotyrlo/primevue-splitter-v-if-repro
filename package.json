@@ -1,0 +1,18 @@
+{
+  "name": "primevue-splitter-v-if-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "primevue": "4.5.4",
+    "@primevue/themes": "^4.5.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "vite": "^6.3.5"
+  }
+}
