@@ -1,0 +1,18 @@
+diff --git a/splitter/index.mjs b/splitter/index.mjs
+--- a/splitter/index.mjs
++++ b/splitter/index.mjs
+@@ -77,6 +77,14 @@
+   },
+   mounted: function mounted() {
+     this.initializePanels();
++    this._lastPanelCount = this.panels.length;
++  },
++  updated: function updated() {
++    var currentPanelCount = this.panels.length;
++    if (currentPanelCount !== this._lastPanelCount) {
++      this._lastPanelCount = currentPanelCount;
++      this.initializePanels();
++    }
+   },
+   beforeUnmount: function beforeUnmount() {
+     this.clear();

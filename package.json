@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "patch": "node scripts/toggle-patch.mjs apply",
+    "unpatch": "node scripts/toggle-patch.mjs revert"
   },
   "dependencies": {
     "vue": "^3.5.13",
