@@ -8,12 +8,12 @@
     "unpatch": "node scripts/toggle-patch.mjs revert"
   },
   "dependencies": {
-    "vue": "^3.5.13",
+    "vue": "^3.5.30",
     "primevue": "4.5.4",
     "@primevue/themes": "^4.5.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.3",
-    "vite": "^6.3.5"
+    "@vitejs/plugin-vue": "^6.0.4",
+    "vite": "^7.3.1"
   }
 }
